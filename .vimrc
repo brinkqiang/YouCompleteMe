@@ -11,6 +11,10 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'jnurmine/Zenburn'
 Plugin 'octol/vim-cpp-enhanced-highlight'
 
+Plugin 'vim-scripts/gdbmgr'
+Plugin 'honza/vim-snippets'
+Plugin 'scrooloose/nerdtree'
+
 call vundle#end()            " required
 
 "
@@ -85,6 +89,10 @@ let g:ycm_complete_in_strings = 1
 
 let g:ycm_collect_identifiers_from_comments_and_strings = 0
 
+let g:ycm_echo_current_diagnostic = 1
+
+let g:ycm_auto_trigger = 1
+
 nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 nmap <C-]> :YcmCompleter GoToDefinitionElseDeclaration<cr>
@@ -95,9 +103,11 @@ autocmd QuickFixCmdPost    l* nested lwindow
 
 let g:clang_format_fallback_style='~/.clang-format'
 let g:ycm_server_python_interpreter='/usr/bin/python'
-let g:ycm_global_ycm_extra_conf='~/.vim/.ycm_extra_conf.py'
+let g:ycm_global_ycm_extra_conf='~/.ycm_extra_conf.py'
 
-map <C-n> :NERDTreeToggle<CR>
+map <F5> :call CompileRunGcc()<CR>
+map <F6> :NERDTree<CR>
+map <F8> :PluginInstall<CR>
 
 if has('gui_running')
   set background=dark
@@ -105,8 +115,6 @@ if has('gui_running')
 else
   colorscheme zenburn
 endif
-
-map <F5> :call CompileRunGcc()<CR>
 
 func! CompileRunGcc()
     exec "w" 
@@ -125,3 +133,4 @@ func! CompileRunGcc()
         :!bash %
     endif
 endfunc
+
