@@ -8,6 +8,7 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'brinkqiang/YouCompleteMe'
+Plugin 'brinkqiang/vim-go'
 Plugin 'jnurmine/Zenburn'
 Plugin 'octol/vim-cpp-enhanced-highlight'
 
