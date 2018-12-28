@@ -6,15 +6,15 @@ set rtp+=~/.vim/bundle/Vundle.vim
 
 call vundle#begin()
 
-Plugin 'VundleVim/Vundle.vim'
+Plugin 'brinkqiang/Vundle.vim'
 Plugin 'brinkqiang/YouCompleteMe'
 Plugin 'brinkqiang/vim-go'
-Plugin 'jnurmine/Zenburn'
-Plugin 'octol/vim-cpp-enhanced-highlight'
+Plugin 'brinkqiang/Zenburn'
+Plugin 'brinkqiang/vim-cpp-enhanced-highlight'
 
-Plugin 'vim-scripts/gdbmgr'
-Plugin 'honza/vim-snippets'
-Plugin 'scrooloose/nerdtree'
+Plugin 'brinkqiang/gdbmgr'
+Plugin 'brinkqiang/vim-snippets'
+Plugin 'brinkqiang/nerdtree'
 
 call vundle#end()            " required
 
