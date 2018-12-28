@@ -8,13 +8,16 @@ call vundle#begin()
 
 Plugin 'brinkqiang/Vundle.vim'
 Plugin 'brinkqiang/YouCompleteMe'
-Plugin 'brinkqiang/vim-go'
+
 Plugin 'brinkqiang/Zenburn'
 Plugin 'brinkqiang/vim-cpp-enhanced-highlight'
 
 Plugin 'brinkqiang/gdbmgr'
 Plugin 'brinkqiang/vim-snippets'
 Plugin 'brinkqiang/nerdtree'
+
+Plugin 'brinkqiang/vim-go'
+Plugin 'brinkqiang/vim-gocode'
 
 call vundle#end()            " required
 
