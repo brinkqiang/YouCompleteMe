@@ -134,12 +134,9 @@ func! CompileRunGcc()
     elseif &filetype == 'python'
         exec '!python %<'
     elseif &filetype == 'go'
-        exec '!go build %'
-        exec '!./%<'
+        exec '!go run %'
     elseif &filetype == 'sh'
         :!bash %
     endif
 endfunc
-
-
 
