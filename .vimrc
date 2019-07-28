@@ -135,7 +135,7 @@ func! CompileRunGcc()
         exec '!python %<'
     elseif &filetype == 'go'
         exec '!go run %'
-    elseif &filetype == 'go'
+    elseif &filetype == 'lua'
         exec '!lua53 %'
     elseif &filetype == 'sh'
         :!bash %
