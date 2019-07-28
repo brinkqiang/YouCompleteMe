@@ -123,18 +123,23 @@ endif
 func! CompileRunGcc()
     exec "w" 
     if &filetype == 'c' 
-        exec '!g++ % -o %<'
+        exec '!g++ -g % -o %<'
         exec '!./%<'
     elseif &filetype == 'cc' 
-        exec '!g++ % -o %<'
+        exec '!g++ -g % -o %<'
         exec '!./%<'
     elseif &filetype == 'cpp'
-        exec '!g++ % -o %<'
+        exec '!g++ -g % -o %<'
         exec '!./%<'
     elseif &filetype == 'python'
         exec '!python %<'
+    elseif &filetype == 'go'
+        exec '!go build %'
+        exec '!./%<'
     elseif &filetype == 'sh'
         :!bash %
     endif
 endfunc
+
+
 
