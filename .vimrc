@@ -18,6 +18,7 @@ Plugin 'brinkqiang/nerdtree'
 
 Plugin 'brinkqiang/vim-go'
 Plugin 'brinkqiang/vim-gocode'
+Plugin 'brinkqiang/LeaderF'
 
 call vundle#end()            " required
 
